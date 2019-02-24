@@ -1,0 +1,11 @@
+#Counts the number of times the string 'bob' occurs in lowercase string s
+
+#Solution A 
+numBobs = 0
+x = 0
+for i in s:
+    i = s[x:x+3:1]
+    if i == "bob":
+        numBobs += 1
+    x += 1
+print("Number of times bob occurs is: " + str(numBobs))
