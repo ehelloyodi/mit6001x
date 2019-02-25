@@ -1,0 +1,14 @@
+#Prints the longest substring of s in which the letters occur in alphabetical order
+
+#Solution A
+result = s[0]
+longest = s[0]
+for i in s[1:]:
+    if i >= result[-1]:
+        result += i
+        if len(result) > len(longest):
+            longest = result
+        else:
+            result = i
+
+print("Longest substring in alphabetical order is:" + str(longest))
