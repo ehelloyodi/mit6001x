@@ -1,0 +1,13 @@
+#Updates the hand. Does not modify hand. 
+#Word: string
+#Hand: dictionary (string -> int)
+#Returns: dictionary (string -> int)
+
+#Solution A
+def updateHand(hand, word):
+  output = hand.copy
+  for i in word:
+    if i in output.keys():
+      output[i] -= 1
+  return output
+    
