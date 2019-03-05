@@ -1,0 +1,15 @@
+#getWordScore returns the score for a word assuming the word is valid
+#Letters are scored as in Scrabble
+#word: string (lowercase)
+#n: integer, >= 0
+
+#Solution A
+def getWordScore(word, n): 
+  score = 0
+  for i in word:
+    score += SCRABBLE_LETTER_VALUES[i]
+  score *= len(word)
+  if n == len(word): 
+    score += 50
+  return score
+    
